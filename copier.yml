@@ -5,7 +5,7 @@ _subdirectory: template
 _message_after_copy: |
     Your project template has been copied!
 
-    Remember to look for any unfilled `changeme` strings and confirm the license!
+    Remember to look for any `changeme` placeholders and replace them!
     By default this template uses MIT license.
 
     Next steps:
@@ -14,7 +14,7 @@ _message_after_copy: |
     git init
     git add .
     git commit -m "Initial commit from simple-modern-uv."
-    # Create repo on GitHub, then:
+    # Create repo on GitHub, then (update URL if needed):
     git remote add origin git@github.com:{{ package_github_org }}/{{ package_name }}.git
     git branch -M main
     git push -u origin main
@@ -41,5 +41,5 @@ package_author_email:
 
 package_github_org:
     type: str
-    help: Package GitHub org or username? (Press enter to fill in later.)
+    help: Package GitHub org or username?
     default: changeme
