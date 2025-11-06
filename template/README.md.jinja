@@ -6,13 +6,30 @@ delete this message!
 Below are general setup instructions that you may remove or keep and adapt for your
 project.\]\]\]
 
-* * *
+## Setup
 
-## Project Docs
+This project uses [**uv**](https://docs.astral.sh/uv/) for Python and dependency management.
 
-For how to install uv and Python, see [installation.md](installation.md).
+Install uv:
+```shell
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-For development workflows, see [development.md](development.md).
+# Or with brew
+brew install uv
+```
+
+Install dependencies:
+```shell
+uv sync
+```
+
+Run the main script:
+```shell
+uv run src/main.py
+```
+
+For more development workflows, see [development.md](development.md).
 
 * * *
 
