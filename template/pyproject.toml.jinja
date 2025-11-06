@@ -98,8 +98,11 @@ reportUnreachable = false
 # reportPrivateLocalImportUsage = false
 # reportMissingImports = false
 # reportUnnecessaryIsInstance = false
-# reportUnknownVariableType = false
-# reportUnknownArgumentType = false
+# These are disabled to reduce noise from third-party libraries without complete type hints:
+reportUnknownVariableType = false
+reportUnknownArgumentType = false
+reportUnknownLambdaType = false
+reportUnknownMemberType = false
 
 [tool.codespell]
 # Add here as needed:
