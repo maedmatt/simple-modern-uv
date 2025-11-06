@@ -14,8 +14,6 @@ For how to install uv and Python, see [installation.md](installation.md).
 
 For development workflows, see [development.md](development.md).
 
-For instructions on publishing to PyPI, see [publishing.md](publishing.md).
-
 * * *
 
 *This project was built from

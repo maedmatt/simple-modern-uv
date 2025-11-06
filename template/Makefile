@@ -4,9 +4,9 @@
 
 .DEFAULT_GOAL := default
 
-.PHONY: default install lint test upgrade build clean agent-rules
+.PHONY: default install lint test upgrade clean agent-rules
 
-default: agent-rules install lint test 
+default: agent-rules install lint test
 
 install:
 	uv sync --all-extras
@@ -20,9 +20,6 @@ test:
 upgrade:
 	uv sync --upgrade --all-extras --dev
 
-build:
-	uv build
-
 agent-rules: CLAUDE.md AGENTS.md
 
 # Use .cursor/rules for sources of rules.
@@ -34,8 +31,6 @@ AGENTS.md: .cursor/rules/general.mdc .cursor/rules/python.mdc
 	cat .cursor/rules/general.mdc .cursor/rules/python.mdc > AGENTS.md
 
 clean:
-	-rm -rf dist/
-	-rm -rf *.egg-info/
 	-rm -rf .pytest_cache/
 	-rm -rf .mypy_cache/
 	-rm -rf .venv/

@@ -1,10 +1,5 @@
 # ---- Project Info and Dependencies ----
 
-[project.urls]
-Repository = "https://github.com/{{ package_github_org }}/{{ package_name }}"
-# Homepage = "https://..."
-# Documentation = "https://..."
-
 [project]
 name = "{{ package_name }}"
 description = "{{ package_description }}"
@@ -12,27 +7,8 @@ authors = [
     { name="{{ package_author_name }}", email="{{ package_author_email }}" },
 ]
 readme = "README.md"
-license = "MIT"
 requires-python = ">=3.11,<4.0"
-dynamic = ["version"]
-
-# https://pypi.org/classifiers/
-# Adjust as needed:
-classifiers = [
-    # Adjust as needed:
-    "Development Status :: 4 - Beta",
-    # "Development Status :: 5 - Production/Stable",
-    "Intended Audience :: Developers",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Typing :: Typed",
-    # Include this to avoid accidentally publishing to PyPI:
-    # "Private :: Do Not Upload",
-]
+version = "0.1.0"
 
 
 # ---- Main dependencies ----
@@ -53,36 +29,6 @@ dev = [
     "basedpyright>=1.29.1",
     "funlog>=0.2.1",
 ]
-
-[project.scripts]
-# Add script entry points here:
-{{ package_name }} = "{{ package_module }}:main"
-
-
-# ---- Build system ----
-
-# Dynamic versioning from:
-# https://github.com/ninoseki/uv-dynamic-versioning/
-
-[build-system]
-requires = ["hatchling", "uv-dynamic-versioning"]
-build-backend = "hatchling.build"
-
-[tool.hatch.version]
-source = "uv-dynamic-versioning"
-# Note JSON schemas don't seem to be right for tool.hatch.version.source so
-# this may cause false warnings in IDEs.
-# https://github.com/ninoseki/uv-dynamic-versioning/issues/21
-
-[tool.uv-dynamic-versioning]
-vcs = "git"
-style = "pep440"
-bump = true
-
-[tool.hatch.build.targets.wheel]
-# The source location for the package.
-packages = ["src/{{ package_module }}"]
-
 
 # ---- Settings ----
 

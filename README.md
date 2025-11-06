@@ -4,7 +4,9 @@ this](https://imgs.xkcd.com/comics/python_environment.png)](https://xkcd.com/198
 (As usual, XKCD has a comic for this.
 Appropriately enough, the comic is out of date.)
 
-# simple-modern-uv
+# simple-modern-uv (Scripts Fork)
+
+> **Note:** This is a fork of [jlevy/simple-modern-uv](https://github.com/jlevy/simple-modern-uv) adapted for Python scripts rather than packages. All package-building and PyPI publishing features have been removed, keeping only the modern development tooling (uv, ruff, basedpyright, pytest).
 
 [![image](https://img.shields.io/pypi/pyversions/uvinit.svg)](https://pypi.python.org/pypi/uvinit)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
