@@ -21,10 +21,10 @@ upgrade:
 	uv sync --upgrade --all-extras --dev
 
 claude:
-	cat .cursor/rules/general.mdc .cursor/rules/python.mdc > CLAUDE.md
+	cat .cursor/rules/general.mdc .cursor/rules/python.mdc .cursor/rules/slop.mdc > CLAUDE.md
 
 codex:
-	cat .cursor/rules/general.mdc .cursor/rules/python.mdc > AGENTS.md
+	cat .cursor/rules/general.mdc .cursor/rules/python.mdc .cursor/rules/slop.mdc > AGENTS.md
 
 clean:
 	-rm -rf .pytest_cache/
